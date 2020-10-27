@@ -2,18 +2,68 @@
 <html lang="en">
     <head>
         <title>Google Advanced Search</title>
+
+        <!--Link to the SASS stylesheet-->
+        <link href="dist/styles.css" rel="stylesheet" type="text/css">
+
+        <!--Include bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     </head>
     <body>
-        <nav>
+        <nav class="advanced-nav">
+            <div class=advanced-logo>
+                <a href="index.html">
+                    <img alt="Google" id="hplogo" src="images/googlelogo2.png">
+                </a>
+            </div>
             <ul>
                 <li><a href="index.html"><div>Search</div></a></li>
                 <li><a href="image.html"><div>Images</div></a></li>
             </ul>
         </nav>
+
+        <div class="appbar">
+            <span>Advanced Search</span>
+        </div>
+
+        <div class="divider"></div>
         
-        <form action="https://google.com/advanced_search">
-            <input type="text" name="q">
-            <input type="submit" value="Google Advanced Search">
+
+        <form class="advanced-form" action="https://google.com/search">
+            
+            <!--Find pages with label-->
+            <div class="form-group advanced">
+                <span id="find-pages-with">Find pages with...</span>
+            </div>
+            
+
+            <!--All these words-->
+            <div class="form-group advanced">
+                <label for="all-these-words">all these words:</label>
+                <input type="text" id="all-these-words" name="as_q" class="form-control advanced-search">
+            </div>
+                
+            <!--This exact word or phrase-->
+            <div class="form-group advanced">
+                <label for="this-exact-word-or-phrase">this exact word or phrase:</label>
+                <input type="text" id="this-exact-word-or-phrase" name="as_epq" class="form-control advanced-search">
+            </div>
+
+            <!--Any of these words-->
+            <div class="form-group advanced">
+                <label for="any-of-these-words">any of these words:</label>
+                <input type="text" id="any-of-these-words" name="as_oq" class="form-control advanced-search">
+            </div>
+
+            <!--None of these words-->
+            <div class="form-group advanced">
+                <label for="none-of-these-words">none of these words:</label>
+                <input type="text" id="none-of-these-words" name="as_eq" class="form-control advanced-search">
+            </div>
+
+            <div class="advanced-button-container">
+                <input type="submit" value="Advanced Search" class="advanced-button">
+            </div>
         </form>
     </body>
 </html>
