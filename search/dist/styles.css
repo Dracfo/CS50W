@@ -5,31 +5,82 @@ body {
 
 nav {
   width: 100%;
-  border: 1px yellow solid;
+  margin: 0 !important;
+  position: relative;
+  top: 0;
+  padding: 0 30px;
 }
 nav ul {
   text-decoration: none;
   list-style: none;
   display: flex;
   justify-content: flex-end;
-  border: 1px green solid;
+  margin-bottom: 0 !important;
 }
 nav ul li {
   margin: 0 1%;
-  border: 1px red solid;
+  height: 47px;
 }
 nav ul li a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.87);
   font-size: 13px;
-  border: 1px black solid;
+  white-space: nowrap;
+  height: inherit;
+}
+nav ul li a div {
+  height: inherit;
+  text-align: center;
+  padding: 15px 0;
+}
+nav ul li a:hover {
+  color: rgba(0, 0, 0, 0.85);
+  text-decoration: underline;
 }
 
 .center {
   text-align: center;
   min-height: 100px;
   min-width: 400px;
-  margin-bottom: 5%;
+  margin-bottom: 4%;
+  top: 0;
+}
+
+.search-bar-outer {
+  position: relative;
+  background: #fff;
+  display: flex;
+  border: 1px solid #dfe1e5;
+  box-shadow: none;
+  border-radius: 24px;
+  z-index: 3;
+  height: 44px;
+  margin: 0 auto;
+}
+.search-bar-outer .search-bar-inner {
+  padding: 5px 8px 0 14px;
+  position: absolute;
+  top: 0;
+}
+.search-bar-outer .search-bar-inner .search-icon {
+  width: 20px;
+  margin: 8px 0;
+}
+.search-bar-outer .search-bar-inner .search-icon path {
+  fill: #9aa0a6;
+}
+.search-bar-outer .search-bar-inner #q {
+  margin-left: 20px;
+  position: absolute;
+  top: 0;
+  border: 0;
+  background: rgba(0, 0, 0, 0);
+  width: 80vw;
+}
+
+.search-bar-outer:hover {
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  border-color: rgba(223, 225, 229, 0);
 }
 
 .form-group {
@@ -70,7 +121,6 @@ nav ul li a {
   background-image: -webkit-linear-gradient(top, #f8f8f8, #f1f1f1);
   background-color: #f8f8f8;
   border: 1px solid #c6c6c6;
-  color: #222;
 }
 .buttons .btn:focus {
   border: 1px solid #4d90fe;
